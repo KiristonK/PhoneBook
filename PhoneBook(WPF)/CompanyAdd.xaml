@@ -1,0 +1,49 @@
+﻿<Window x:Class="Lab5_WPF.CompanyAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab5_WPF"
+        mc:Ignorable="d"
+        Title="IndividualAdd" Height="349" Width="434">
+    <Grid Height="306" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="192*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="192*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="MainMenu" Grid.ColumnSpan="3" Height="18" VerticalAlignment="Center" Margin="7,0,0,0" HorizontalAlignment="Left" Width="422">
+            <MenuItem Header="Exit" Click="Exit_OnClick"></MenuItem>
+        </Menu>
+        <TextBox x:Name="FirstName" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" KeyDown="FirstName_KeyDown" TextChanged="PreviewChange"
+            VerticalAlignment="Center" Width="180" Height="30" FontSize="20" Background="#FFEBEBEB" AllowDrop="False" UndoLimit="94" ToolTip="Enter First Name" />
+        <TextBox x:Name="LastName" HorizontalAlignment="Center" TextWrapping="Wrap" KeyDown="LastName_KeyDown" TextChanged="PreviewChange"
+            VerticalAlignment="Center" Width="180" Height="32" FontSize="20" Background="#FFEBEBEB" AllowDrop="False" UndoLimit="94" ToolTip="Enter Last Name"
+            Grid.Row="2" Grid.Column="0" />
+        <TextBox x:Name="PhoneNumber" HorizontalAlignment="Center" TextWrapping="Wrap" KeyDown="PhoneNumber_KeyDown" TextChanged="PreviewChange"
+            VerticalAlignment="Center" Width="180" Height="32" FontSize="20" Background="#FFEBEBEB" AllowDrop="False" UndoLimit="94" ToolTip="Enter phone number" 
+            Grid.Row="3" Grid.Column="0" />
+        <TextBox x:Name="Address" HorizontalAlignment="Center" TextWrapping="Wrap" KeyDown="Address_KeyDown" TextChanged="PreviewChange"
+                 Width="180" FontSize="20" Background="#FFEBEBEB" AllowDrop="False" UndoLimit="94" ToolTip="Enter address (not important)" Grid.Row="4"
+                 Grid.Column="0" Height="32" VerticalAlignment="Center" />
+        <TextBox x:Name="RecordPreview" HorizontalAlignment="Center" Margin="0,6,0,7" Grid.Row="2" Text="" TextWrapping="Wrap" Width="180" 
+                 Grid.Column="2" Grid.RowSpan="4" Focusable="False"/>
+        <TextBox x:Name="Nip" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" KeyDown="Nip_KeyDown" TextChanged="PreviewChange"
+                 VerticalAlignment="Center" Width="180" Height="30" FontSize="20" Background="#FFEBEBEB" AllowDrop="False" UndoLimit="94" ToolTip="Enter Company NIP" />
+        <TextBox x:Name="CompanyName" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Center" TextWrapping="Wrap" KeyDown="CompanyName_KeyDown" TextChanged="PreviewChange"
+                 VerticalAlignment="Center" Width="180" Height="30" FontSize="20" Background="#FFEBEBEB" AllowDrop="False" UndoLimit="94" ToolTip="Enter Company Name" />
+        <Label Content="Record preview" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="180" FontSize="11" Height="24" Grid.Row="1" Focusable="False"/>
+        <Button x:Name="AddRecordButton" Content="Add Record" HorizontalAlignment="Center" Grid.Row="6" Width="180"  Height="30" VerticalAlignment="Center" Grid.Column="2" Click="AddRecord"/>
+        
+    </Grid>
+</Window>
